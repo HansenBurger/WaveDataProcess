@@ -1,12 +1,10 @@
 from peewee import *
-from data import DynamicData
 from playhouse.sqlite_ext import JSONField
-from playhouse.shortcuts import model_to_dict, dict_to_model
 
-# db = SqliteDatabase(DynamicData().zif)
-db = SqliteDatabase(
-    r'C:\Main\Data\_\Baguan\Records\202001\ZD80C8F020010900QE0\ZD80C8F020010900QE0.zif',
-)
+try:
+    db = SqliteDatabase('tmp.db')
+except:
+    print('Data encoding conversion not completed !')
 
 
 class RecordInfo(Model):
@@ -36,7 +34,7 @@ class RecordList(Model):
 
 class RecordVer(Model):
 
-    ver = IntegerField(column_name='Version')
+    ver = IntegerField(column_name='Version', primary_key=True)
     re1 = TextField(column_name='Reserve1')
     re2 = TextField(column_name='Reserve2')
     re3 = TextField(column_name='Reserve3')
