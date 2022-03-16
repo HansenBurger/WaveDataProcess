@@ -1,0 +1,134 @@
+{
+    "HeaderMarker": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "I",
+        "DEFINE": ""
+    },
+    "RTFVersion": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "I",
+        "DEFINE": ""
+    },
+    "FileCheckCode": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "I",
+        "DEFINE": ""
+    },
+    "HeaderSize": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "I",
+        "DEFINE": ""
+    },
+    "Reserved1": {
+        "SIZE": 12,
+        "BYTES": 4,
+        "TYPE": "I",
+        "DEFINE": ""
+    },
+    "RecordID": {
+        "SIZE": 32,
+        "BYTES": 2,
+        "TYPE": "H",
+        "DEFINE": ""
+    },
+    "Name": {
+        "SIZE": 24,
+        "BYTES": 2,
+        "TYPE": "H",
+        "DEFINE": ""
+    },
+    "Doctor": {
+        "SIZE": 16,
+        "BYTES": 2,
+        "TYPE": "H",
+        "DEFINE": ""
+    },
+    "AddInfo": {
+        "SIZE": 64,
+        "BYTES": 2,
+        "TYPE": "H",
+        "DEFINE": ""
+    },
+    "RecordLength": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "I",
+        "DEFINE": ""
+    },
+    "RefSampleRate": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "ByteLacking1": {
+        "SIZE": 1,
+        "BYTES": 2,
+        "TYPE": "H",
+        "DEFINE": ""
+    },
+    "RecordType": {
+        "SIZE": 1,
+        "BYTES": 2,
+        "TYPE": "H",
+        "DEFINE": ""
+    },
+    "Reserved2": {
+        "SIZE": 10,
+        "BYTES": 4,
+        "TYPE": "I",
+        "DEFINE": ""
+    },
+    "Age": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "I",
+        "DEFINE": ""
+    },
+    "Gender": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "I",
+        "DEFINE": ""
+    },
+    "Height": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "I",
+        "DEFINE": ""
+    },
+    "Weight": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "I",
+        "DEFINE": ""
+    },
+    "AccessTime": {
+        "SIZE": 1,
+        "BYTES": 8,
+        "TYPE": "Q",
+        "DEFINE": ""
+    },
+    "StartTime": {
+        "SIZE": 1,
+        "BYTES": 8,
+        "TYPE": "Q",
+        "DEFINE": ""
+    },
+    "ByteLacking2": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "I",
+        "DEFINE": ""
+    },
+    "ChannelCnt": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "I",
+        "DEFINE": ""
+    }
+}

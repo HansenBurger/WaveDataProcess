@@ -1,0 +1,50 @@
+{
+    "wcLabel": {
+        "SIZE": 64,
+        "BYTES": 1,
+        "TYPE": "b",
+        "DEFINE": ""
+    },
+    "nSampleRate": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "abADCBit": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "I",
+        "DEFINE": ""
+    },
+    "abADCRange": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "I",
+        "DEFINE": ""
+    },
+    "nZeroValue": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "I",
+        "DEFINE": ""
+    },
+    "enSignalType": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "I",
+        "DEFINE": ""
+    },
+    "nColumnCnt": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "I",
+        "DEFINE": ""
+    },
+    "dwReserve": {
+        "SIZE": 2,
+        "BYTES": 4,
+        "TYPE": "I",
+        "DEFINE": ""
+    }
+}

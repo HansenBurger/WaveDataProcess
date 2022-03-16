@@ -1,0 +1,680 @@
+{
+    "uiMarker": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "I",
+        "DEFINE": ""
+    },
+    "uiIndex": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "I",
+        "DEFINE": ""
+    },
+    "uiRecTime": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "I",
+        "DEFINE": ""
+    },
+    "uiDataIndex": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "I",
+        "DEFINE": ""
+    },
+    "zModel": {
+        "SIZE": 1,
+        "BYTES": 2,
+        "TYPE": "H",
+        "DEFINE": ""
+    },
+    "zCode": {
+        "SIZE": 1,
+        "BYTES": 2,
+        "TYPE": "H",
+        "DEFINE": ""
+    },
+    "cDeviceID": {
+        "SIZE": 16,
+        "BYTES": 1,
+        "TYPE": "b",
+        "DEFINE": ""
+    },
+    "cDocName": {
+        "SIZE": 16,
+        "BYTES": 1,
+        "TYPE": "b",
+        "DEFINE": ""
+    },
+    "uiImportTime": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "I",
+        "DEFINE": ""
+    },
+    "cReserved": {
+        "SIZE": 8,
+        "BYTES": 1,
+        "TYPE": "b",
+        "DEFINE": ""
+    },
+    "p_P_PEAK": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "p_P_MEAN": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "p_PEEP": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "p_IE": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "p_f_TOT": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "p_V_TI": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "p_V_TE": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "p_VE_TOT": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "p_O2": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "p_PEEP_I": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "p_R_DYN": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "p_R_STAT": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "p_C_DYN": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "p_C_STAT": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "p_PI_END": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "p_TI_SPONT": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "p_VE_SPONT": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "p_P_PL": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "p_EEF": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "p_MVi": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "p_NIV_Leak": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "p_RR_Spont": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "p_P_01": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "p_WOB_v": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "p_WOB_p": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "p_P_min": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "p_V_trap": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "p_Temp": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "p_VT_asb": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "p_Reserved": {
+        "SIZE": 19,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "st_PATIENT_TYPE": {
+        "SIZE": 1,
+        "BYTES": 2,
+        "TYPE": "H",
+        "DEFINE": ""
+    },
+    "st_VENT_TYPE": {
+        "SIZE": 1,
+        "BYTES": 2,
+        "TYPE": "H",
+        "DEFINE": ""
+    },
+    "st_VENT_MODE0": {
+        "SIZE": 1,
+        "BYTES": 2,
+        "TYPE": "H",
+        "DEFINE": ""
+    },
+    "st_VENT_MODE": {
+        "SIZE": 1,
+        "BYTES": 2,
+        "TYPE": "H",
+        "DEFINE": ""
+    },
+    "st_MAND_TYPE0": {
+        "SIZE": 1,
+        "BYTES": 2,
+        "TYPE": "H",
+        "DEFINE": ""
+    },
+    "st_MAND_TYPE": {
+        "SIZE": 1,
+        "BYTES": 2,
+        "TYPE": "H",
+        "DEFINE": ""
+    },
+    "st_SPON_TYPE0": {
+        "SIZE": 1,
+        "BYTES": 2,
+        "TYPE": "H",
+        "DEFINE": ""
+    },
+    "st_SPON_TYPE": {
+        "SIZE": 1,
+        "BYTES": 2,
+        "TYPE": "H",
+        "DEFINE": ""
+    },
+    "st_f_TOT": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "st_O2": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "st_V_T": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "st_P_I": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "st_P_SUPP": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "st_PEEP": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "st_T_insp": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "st_T_rise": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "st_Tring_Type": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "st_V_SENS": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "st_P_SENS": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "st_V_MAX": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "st_T_PL": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "st_E_SENS": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "st_IBW": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "st_T_E": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "st_O2_sensor": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "st_IE_insp": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "st_IE_exp": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "st_P_high_d": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "st_T_high": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "st_T_low": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "st_P_high": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "st_P_low": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "st_T_simv": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "st_PEEP_i": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "st_F_assist": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "st_V_assist": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "st_Reserved": {
+        "SIZE": 16,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "apst_f_ToT": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "apst_VT": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "apst_TI": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "apst_PI": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "apst_O2": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "apst_F_PEAK": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "apst_Reserved": {
+        "SIZE": 10,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "ast_P_PEAK_UP": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "ast_P_PEAK_DOWN": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "ast_VE_TOT_UP": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "ast_VE_TOT_DOWN": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "ast_V_TE_MAND_UP": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "ast_V_TE_MAND_DOWN": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "ast_V_TE_SPONT_UP": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "ast_V_TE_SPONT_DOWN": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "ast_T_apnea": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "ast_f_TOT_UP": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "ast_f_TOT_DOWN": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "ast_V_TI_UP": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "ast_PEEP_UP": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "ast_PEEP_DOWN": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "ast_Reserved": {
+        "SIZE": 10,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
+    "alarm_cnt": {
+        "SIZE": 1,
+        "BYTES": 1,
+        "TYPE": "b",
+        "DEFINE": ""
+    },
+    "alarm_slience": {
+        "SIZE": 1,
+        "BYTES": 1,
+        "TYPE": "b",
+        "DEFINE": ""
+    },
+    "alarm_code": {
+        "SIZE": 31,
+        "BYTES": 2,
+        "TYPE": "H",
+        "DEFINE": ""
+    },
+    "bed_HR": {
+        "SIZE": 1,
+        "BYTES": 2,
+        "TYPE": "H",
+        "DEFINE": ""
+    },
+    "bed_SBP": {
+        "SIZE": 1,
+        "BYTES": 2,
+        "TYPE": "H",
+        "DEFINE": ""
+    },
+    "bed_DBP": {
+        "SIZE": 1,
+        "BYTES": 2,
+        "TYPE": "H",
+        "DEFINE": ""
+    },
+    "bed_MBP": {
+        "SIZE": 1,
+        "BYTES": 2,
+        "TYPE": "H",
+        "DEFINE": ""
+    },
+    "bed_SpO2": {
+        "SIZE": 1,
+        "BYTES": 2,
+        "TYPE": "H",
+        "DEFINE": ""
+    },
+    "bed_RR": {
+        "SIZE": 1,
+        "BYTES": 2,
+        "TYPE": "H",
+        "DEFINE": ""
+    },
+    "bed_PR": {
+        "SIZE": 1,
+        "BYTES": 2,
+        "TYPE": "H",
+        "DEFINE": ""
+    },
+    "bed_CVPm": {
+        "SIZE": 1,
+        "BYTES": 2,
+        "TYPE": "H",
+        "DEFINE": ""
+    },
+    "bed_Reserved": {
+        "SIZE": 24,
+        "BYTES": 2,
+        "TYPE": "H",
+        "DEFINE": ""
+    },
+    "cNote": {
+        "SIZE": 128,
+        "BYTES": 1,
+        "TYPE": "b",
+        "DEFINE": ""
+    },
+    "fReserved": {
+        "SIZE": 40,
+        "BYTES": 4,
+        "TYPE": "I",
+        "DEFINE": ""
+    }
+}

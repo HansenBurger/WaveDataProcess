@@ -1,0 +1,9 @@
+HeadFields,Bytes,Type,Define
+wcLabel,64,b,
+nSampleRate,1,f,
+abADCBit,1,I,
+abADCRange,1,I,
+nZeroValue,1,I,
+enSignalType,1,I,
+nColumnCnt,1,I,
+dwReserve,2,I,
