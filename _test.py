@@ -1,6 +1,6 @@
 import BinImport
-import Fundal
 from pathlib import Path
+from matplotlib import pyplot as plt
 
 data_f = Path(r'C:\Main\Data\_\Baguan\Records\202104\ZP0EBDC521040600YAR')
 f_id = 'ZP0EBDC521040600YAR_252'
@@ -15,5 +15,17 @@ zpx_p = BinImport.ParaData(zpx)
 
 head, _ = zdt_p.HeadInfoGet()
 para = zpx_p.ParaInfoGet()
+info = zif_p.RecordInfoGet()
 
-pass
+wave = zdt_p.WaveDataGet()
+F = wave['s_F']
+V = wave['s_V']
+P = wave['s_P']
+
+plt.subplot(3, 1, 1)
+plt.plot(P[0:500])
+plt.subplot(3, 1, 2)
+plt.plot(F[0:500])
+plt.subplot(3, 1, 3)
+plt.plot(V[0:500])
+plt.show()
