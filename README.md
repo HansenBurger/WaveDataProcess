@@ -18,7 +18,6 @@ Main file structure
 .
 ├── BinImport.py
 ├── README.md
-├── ZifORMClass.py
 ├── _test.py
 └── sources
     └── json
@@ -32,13 +31,11 @@ Description:
 
 1. BinImport.py: Kit core code file
 
-2. ZifORMClass.py: ORM class for .zif file(based on sqlite)
+2. _test.py: Function test
 
-3. _test.py: Function test
+3. README.md: Read me now! (tp-tp)
 
-4. README.md: Read me now! (tp-tp)
-
-5. source: Dir to save the static source file
+4. source: Dir to save the static source file
 
 ## How To Use
 
