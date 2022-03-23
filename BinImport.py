@@ -12,14 +12,15 @@ class Basic():
     def __init__(self) -> None:
         self.folder_p = Path().absolute(
         ) / 'WaveDataProcess' / 'sources' / 'json'
+        self.minsize = 100
 
     def __DataFileCheck(self, file):
         file = Path(file) if not isinstance(file, PurePath) else file
-        if file.is_file():
-            pass
+        if file.is_file() and file.stat().st_size > self.minsize:
+            print('File passes validation !')
         else:
             file = None
-            print('File Not Exist !')
+            print('File not exist or not pass the validation !')
         return file
 
     def __HeadFieldsLoad(self, head_type):
@@ -83,6 +84,9 @@ class WaveData(Basic):
         return self.__resr
 
     def HeadInfoGet(self):
+        if not self.__file:
+            return {}, {}
+
         fields_0 = self._Basic__HeadFieldsLoad('wave_head')
         fields_1 = self._Basic__HeadFieldsLoad('data_engine')
         with open(self.__file, 'rb') as f:
@@ -97,10 +101,15 @@ class WaveData(Basic):
         return head, engine
 
     def WaveDataGet(self):
+        if not self.__file:
+            return {}
+
         head = self.HeadInfoGet()[0] if not self.__head else self.__head
         hsize = head['HeaderSize']
         chcnt = head['ChannelCnt']
         d_in = []
+
+        del head
 
         IndexSet = lambda x, func: [
             i for (i, val) in enumerate(x) if func(val)
@@ -174,6 +183,9 @@ class ParaData(Basic):
         return False
 
     def ParaInfoGet(self):
+        if not self.__file:
+            return {}
+
         fields_0 = self._Basic__HeadFieldsLoad('vent_para')
         with open(self.__file, 'rb') as f:
             file_size = self.__file.stat().st_size
@@ -187,6 +199,8 @@ class ParaData(Basic):
         return para
 
     def VMInter(self, m_n, p_sel):
+        if not self.__file:
+            return []
 
         m_n = m_n.split('-')[0] if len(m_n.split('-')) > 1 else m_n
         fields_0 = self._Basic__HeadFieldsLoad('machine_mode')

@@ -39,7 +39,13 @@ Description:
 
 ## How To Use
 
-First of all, import the BinImport
+First of all, Clone this project into your repository
+
+```shell
+git submodule add https://github.com/HansenBurger/WaveDataProcess.git
+```
+
+Then, import the package
 
 ```python
 from WaveDataProcess import BinImport
