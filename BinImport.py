@@ -54,20 +54,20 @@ class Basic():
         resr = None
         fields_0 = self._Basic__HeadFieldsLoad('machine_mode')
         if type(input_) == int:
-            for type in fields_0.keys():
-                if input_ not in fields_0[type]['CNT_NUM']:
+            for vm_type in fields_0.keys():
+                if input_ not in fields_0[vm_type]['CNT_NUM']:
                     pass
                 else:
-                    resr = fields_0[type]['SAMPLE_RATE']
+                    resr = fields_0[vm_type]['SAMPLE_RATE']
                     break
         elif type(input_) == str:
             input_ = input_.split('-')[0] if len(
                 input_.split('-')) > 1 else input_
-            for type in fields_0.keys():
-                if input_ not in fields_0[type]['NAME']:
+            for vm_type in fields_0.keys():
+                if input_ not in fields_0[vm_type]['NAME']:
                     pass
                 else:
-                    resr = fields_0[type]['SAMPLE_RATE']
+                    resr = fields_0[vm_type]['SAMPLE_RATE']
                     break
         return resr
 
