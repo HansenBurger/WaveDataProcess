@@ -17,7 +17,7 @@ class Basic():
     def __DataFileCheck(self, file):
         file = Path(file) if not isinstance(file, PurePath) else file
         if file.is_file() and file.stat().st_size > self.minsize:
-            print('File passes validation !')
+            pass
         else:
             file = None
             print('File not exist or not pass the validation !')
