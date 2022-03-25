@@ -249,9 +249,15 @@ class RidData(Basic):
 
     def __PreProcess(self):
         with sqlite3.connect(self.__loc) as con:
-            con.text_factory = lambda x: x.decode('gbk')
-            statements = ['SELECT * FROM ' + x for x in self.__t_n]
-            df_s = [pd.read_sql(x, con) for x in statements]
+            try:
+                con.text_factory = lambda x: x.decode('gbk')
+                statements = ['SELECT * FROM ' + x for x in self.__t_n]
+                df_s = [pd.read_sql(x, con) for x in statements]
+            except:
+                con.text_factory = lambda x: x.decode('gb18030')
+                statements = ['SELECT * FROM ' + x for x in self.__t_n]
+                df_s = [pd.read_sql(x, con) for x in statements]
+
         with sqlite3.connect(self.__db) as con:
             for i in range(3):
                 df_s[i].to_sql(name=self.__t_n[i], con=con)
@@ -264,25 +270,38 @@ class RidData(Basic):
             print('Convert DataBase not exist !')
             return
 
+    def __FieldsVal(self, dict_, field):
+        try:
+            result_ = dict_[field]
+        except:
+            result_ = None
+        return result_
+
     def RecordInfoGet(self):
-        self.__PreProcess()
+        try:
+            self.__PreProcess()
+        except:
+            return {}
         dict_ = {}
         src_c = RecordInfo
         q_dev = list(src_c.select())[0].dev
         q_pat = list(src_c.select())[0].pat
-        dict_['icu'] = q_dev['ICU']
-        dict_['m_n'] = q_dev['NAME']
-        dict_['age'] = q_pat['AGE']
-        dict_['pid'] = q_pat['PID']
-        dict_['rid'] = q_pat['RID']
-        dict_['sex'] = q_pat['SEX']
-        dict_['name'] = q_pat['NAME']
-        dict_['remark'] = q_pat['REMARK']
+        dict_['icu'] = self.__FieldsVal(q_dev, 'ICU')
+        dict_['m_n'] = self.__FieldsVal(q_dev, 'NAME')
+        dict_['age'] = self.__FieldsVal(q_pat, 'AGE')
+        dict_['pid'] = self.__FieldsVal(q_pat, 'PID')
+        dict_['rid'] = self.__FieldsVal(q_pat, 'RID')
+        dict_['sex'] = self.__FieldsVal(q_pat, 'SEX')
+        dict_['name'] = self.__FieldsVal(q_pat, 'NAME')
+        dict_['remark'] = self.__FieldsVal(q_pat, 'REMARK')
         self.__DbRemove()
         return dict_
 
     def RecordListGet(self):
-        self.__PreProcess()
+        try:
+            self.__PreProcess()
+        except:
+            return {}
         dict_ = {}
         src_c = RecordList
         query = list(src_c.select())
