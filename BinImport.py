@@ -247,6 +247,10 @@ class RidData(Basic):
         self.__db = 'tmp.db'
         self.__t_n = ['RecordInfo', 'RecordList', 'RecordVer']
 
+    @property
+    def db(self):
+        return self.__db
+
     def __PreProcess(self):
         with sqlite3.connect(self.__loc) as con:
             try:
@@ -258,12 +262,18 @@ class RidData(Basic):
                 statements = ['SELECT * FROM ' + x for x in self.__t_n]
                 df_s = [pd.read_sql(x, con) for x in statements]
 
+        if not Path(self.__db).is_file():
+            pass
+        else:
+            Path(self.__db).unlink()
+
         with sqlite3.connect(self.__db) as con:
             for i in range(3):
                 df_s[i].to_sql(name=self.__t_n[i], con=con)
 
     def __DbRemove(self):
-        db.close()  # close connection to delete the database
+        db.close()
+        # close connection to delete the database
         try:
             Path(self.__db).unlink()
         except:
