@@ -14,7 +14,13 @@ class Basic():
         ) / 'WaveDataProcess' / 'sources' / 'json'
         self.minsize = 100
 
-    def __DataFileCheck(self, file):
+    def __DataFileCheck(self, file: Path) -> Path:
+        '''
+        Name: DataFileCheck
+        Func: Check the file prepared to be read existed or not
+        Input: Path of the file to be detected (class:Path)
+        Output: Result of detection (class: Path | None)
+        '''
         file = Path(file) if not isinstance(file, PurePath) else file
         if file.is_file() and file.stat().st_size > self.minsize:
             pass
@@ -23,7 +29,13 @@ class Basic():
             print('File not exist or not pass the validation !')
         return file
 
-    def __HeadFieldsLoad(self, head_type):
+    def __HeadFieldsLoad(self, head_type: str) -> dict:
+        '''
+        Name: HeadFieldsLoad
+        Func: Load the .json file data in specific cate
+        Input: Head fileds name (class: str)
+        Output: A dict about this hf's size, bytes and so (class: dict)
+        '''
         data = None
         p = Path(self.folder_p) / (head_type + '.json')
         if not p.is_file():
@@ -33,7 +45,13 @@ class Basic():
                 data = json.load(f)
         return data
 
-    def __ReadByBytes(self, file, d_in):
+    def __ReadByBytes(self, file: open, d_in: dict) -> dict:
+        '''
+        Name: ReadByBytes(Interpretation)
+        Func: Read the data information contained in the fields one by one
+        Input: open file (class: open), dict contain head fields (class: dict)
+        Output: head fields value in the file
+        '''
         d_out = {}
         for key in d_in.keys():
             d_ = d_in[key]
@@ -43,14 +61,26 @@ class Basic():
             d_out[key] = value
         return d_out
 
-    def __DictsCombine(self, list_dicts):
+    def __DictsCombine(self, list_dicts: list) -> dict:
+        '''
+        Name: DictsCombine
+        Func: Trans List of dict to dict of list
+        Input: A list of dicts (class: list)
+        Output: A dict of lists (class: dict)
+        '''
         dict_ = defaultdict(list)
         for d in list_dicts:
             for k, v in d.items():
                 dict_[k].append(v)
         return dict_
 
-    def ManualSF(self, input_=None):
+    def ManualSF(self, input_=None) -> int:
+        '''
+        Name: ManualSF
+        Func: Manual read the sample rate(by num or machine_name)
+        Input: Feature of the machine (class: int | str)
+        Output: Sample Rate
+        '''
         resr = None
         fields_0 = self._Basic__HeadFieldsLoad('machine_mode')
         if type(input_) == int:
@@ -83,7 +113,7 @@ class WaveData(Basic):
     def resr(self):
         return self.__resr
 
-    def HeadInfoGet(self):
+    def HeadInfoGet(self) -> dict:
         if not self.__file:
             return {}, {}
 
@@ -100,7 +130,7 @@ class WaveData(Basic):
         self.__resr = resr if resr > 0 and resr < 100 else self.ManualSF(m_cnt)
         return head, engine
 
-    def WaveDataGet(self):
+    def WaveDataGet(self) -> dict:
         if not self.__file:
             return {}
 
@@ -176,7 +206,7 @@ class ParaData(Basic):
         self.__file = self._Basic__DataFileCheck(zpx_path)
         self.__para = None
 
-    def __StringCheck(self, x, l):
+    def __StringCheck(self, x: str, l: list) -> bool:
         for i in l:
             if x == i:
                 return True
@@ -198,7 +228,7 @@ class ParaData(Basic):
         self.__para = para
         return para
 
-    def VMInter(self, m_n, p_sel):
+    def VMInter(self, m_n: str, p_sel: slice) -> list:
         if not self.__file:
             return []
 
@@ -241,7 +271,7 @@ class ParaData(Basic):
 
 
 class RidData(Basic):
-    def __init__(self, zif_path):
+    def __init__(self, zif_path: Path) -> None:
         super().__init__()
         self.__loc = self._Basic__DataFileCheck(zif_path)
         self.__db = 'tmp.db'
