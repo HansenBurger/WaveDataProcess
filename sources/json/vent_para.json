@@ -233,8 +233,14 @@
         "TYPE": "f",
         "DEFINE": ""
     },
+    "p_f_VT": {
+        "SIZE": 1,
+        "BYTES": 4,
+        "TYPE": "f",
+        "DEFINE": ""
+    },
     "p_Reserved": {
-        "SIZE": 19,
+        "SIZE": 18,
         "BYTES": 4,
         "TYPE": "f",
         "DEFINE": ""
