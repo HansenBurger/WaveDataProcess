@@ -167,14 +167,13 @@ class WaveData(Basic):
         del d_in
 
         ind, s_F, s_P, s_V = [], [], [], []
-        value_d = {'ind': ind, 's_F': s_F, 's_P': s_P, 's_V': s_V}
 
         if chcnt == 2:
             F, P, V = wave_[0], wave_[1], []
         elif chcnt in [3, 5]:
             F, P, V = wave_[0], wave_[1], wave_[2]
         else:
-            return value_d
+            return {'ind': ind, 's_F': s_F, 's_P': s_P, 's_V': s_V}
 
         insp = False
         for i in range(len(F)):
@@ -200,7 +199,7 @@ class WaveData(Basic):
 
         s_V = [0 if i < 0 else i for i in s_V]
 
-        return value_d
+        return {'ind': ind, 's_F': s_F, 's_P': s_P, 's_V': s_V}
 
 
 class ParaData(Basic):
