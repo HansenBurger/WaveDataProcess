@@ -170,7 +170,7 @@ class WaveData(Basic):
 
         if chcnt == 2:
             F, P, V = wave_[0], wave_[1], []
-        elif chcnt in [3, 5]:
+        elif chcnt in [3, 4, 5]:
             F, P, V = wave_[0], wave_[1], wave_[2]
         else:
             return {'ind': ind, 's_F': s_F, 's_P': s_P, 's_V': s_V}
