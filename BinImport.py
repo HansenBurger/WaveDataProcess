@@ -127,7 +127,7 @@ class WaveData(Basic):
         resr = head['RefSampleRate']
         m_cnt = head['Reserved1'][0]
         self.__head = head
-        self.__resr = resr if resr > 0 and resr < 100 else self.ManualSF(m_cnt)
+        self.__resr = resr if resr > 0 and resr < 300 else self.ManualSF(m_cnt)
         return head, engine
 
     def WaveDataGet(self) -> dict:
