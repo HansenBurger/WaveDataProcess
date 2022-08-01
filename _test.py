@@ -5,6 +5,8 @@ from matplotlib import pyplot as plt
 data_f = Path(r'C:\Main\Data\_\Baguan\Records\202104\ZP0EBDC521040600YAR')
 f_id = 'ZP0EBDC521040600YAR_252'
 
+# zdt, zpx, zif all in the data_f
+
 zif = data_f / (f_id.split('_')[0] + '.zif')
 zdt = data_f / (f_id + '.zdt')
 zpx = data_f / (f_id + '.zpx')
